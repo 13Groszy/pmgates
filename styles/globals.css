@@ -595,57 +595,15 @@ footer .view-portfolio {
 
 /* CONTACTS */
 
-.contact-intro {
-  position: relative;
-  margin: 0 auto;
-  margin-bottom: 27.5rem;
-  z-index: 99;
-}
 .details-wrapper{
   display: flex;
   flex-direction: column;
 }
-.contact-intro-img {
-  min-width: 320px;
-  width: 100%;
-  height: 240px;
-  background: url("/temp_gate.jpg") no-repeat;
-}
-
-.contact-intro-img-overlay {
-  width: 100%;
-  height: 100%;
-  background: #00000055;
-}
-
-.contact-intro-text {
-  position: absolute;
-  left: 0;
-  top: 12.5rem;
-  padding: 4.5rem 0.75rem 0 2rem;
-  padding-top: 4.5rem;
-  background: #fff;
-}
-.contact-intro-text h2{
-  padding-bottom: 2rem;
-}
-
-.contact-intro h2.contact-heading-small {
-  display: none;
-}
-
-.contact-intro-text {
-  margin-bottom: 130px;
-}
-
 .contact-details {
   display: flex;
   flex-direction: column;
   padding-left: 2rem;
-}
-
-.contact-details > h2 {
-  margin-bottom: 2rem;
+  padding-top:2rem;
 }
 
 .office-details {
@@ -673,7 +631,6 @@ footer .view-portfolio {
 .formContainer{
   width: 90%;
   max-width: 600px;
-  margin:auto;
 }
 .formWrapper{
   flex: 1;
@@ -684,7 +641,7 @@ footer .view-portfolio {
 }
 .inputGroup {
   height: 50%;
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin: 10px 0;
@@ -703,72 +660,11 @@ footer .view-portfolio {
   border: none;
 }
 
-@media (min-width: 576px) {
-  .contact-intro {
-    height: 720px;
-    margin: 0 auto;
-  }
-  .contact-intro-img {
-    width: 100%;
-    height: 100%;
-    background-image: url("/image-hero.jpg");
-  }
-  .contact-intro-text {
-    height: 268px;
-    padding: 3rem 2rem 3rem 3rem;
-    top: 19rem;
-    left: 4rem;
-  }
-  .contact-intro-text h2 {
-    margin-bottom: 3rem;
-  }
-  .contact-intro h2.contact-heading-small {
-    display: block;
-    position: absolute;
-    top: 16rem;
-    right: 5rem;
-    transform: scale(1.5);
-    color: #eeeff4;
-  }
-  .contact-details {
-    padding-top:5rem;
-  }
-  .office-details {
-    position: relative;
-  }
-}
-
 @media (min-width: 768px) {
-  .contact-intro {
-    height: 720px;
-    margin: 0;
-  }
-  .contact-intro-img {
-    background-image: url("/temp_gate.jpg");
-  }
-  .contact-intro h2.contact-heading-small {
-    transform: scale(2.5);
-    top: 11rem;
-    z-index: 999;
-  }
-  .contact-intro-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 343px;
-    padding: 2rem 3rem;
-    top: 20rem;
-    left:50%;
-  }
-  .contact-intro-text h2{
-    margin-bottom:0;
-  }
+  
   .contact-details {    
     gap: 4rem;
     max-width: 1110px;
-  }
-  .contact-details h2 {
-    max-width: 350px;
   }
   .office-details {
     margin-right: 2rem;
@@ -784,6 +680,17 @@ footer .view-portfolio {
     align-items: center;
     justify-content: center;
     gap:5rem;
+  }
+  .inputGroup {
+    height: 50%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+  }
+  .cont-wrap{
+    justify-content: center;
+    gap: 5rem;
   }
 }
 
@@ -823,11 +730,11 @@ margin: auto;
 .cookiePopUp a:hover, .cookiePopUp button:hover{
   color: #60636d;
 }
-.servicesWrapper{
+.servicesWrapper, .contactWrapper{
   max-width: 1100px;
   margin: auto;
 }
-.servicesWrapper h1{
+.servicesWrapper h1, .contactWrapper h1{
  display: none;
 }
 .servicesAccordion{
@@ -889,7 +796,14 @@ padding-bottom: 1rem;
     display: flex;
     align-items: flex-end;
   }
-  .servicesWrapper h1{
+  .contactWrapper{
+    background: url("/temp_gate2.jpeg") no-repeat center center/cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    height: 50vh;
+    display: flex;
+    align-items: flex-end;
+  }
+  .servicesWrapper h1, .contactWrapper h1{
     font-size: 75px;
     color: white;
     padding-bottom: 1rem;

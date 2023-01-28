@@ -2,22 +2,10 @@ const Contact = () => {
 
     return ( 
     <main>
-      <section className="contact-intro">
-        <div className="contact-intro-img">
-          <div className="contact-intro-img-overlay">
-            <h2 className="contact-heading-small">Contact</h2>
-          </div>
-        </div>
-        <div className="contact-intro-text">
-          <h2>Tell us about your project!</h2>
-          <p>
-            Contact us with your personal project! We are happy to help you with
-            it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quo voluptas, soluta itaque exercitationem nemo architecto provident illum natus dolores!
-          </p>
-        </div>
-      </section>
+      <div className="contactWrapper">
+        <h1>Contact</h1>
+      </div>
       <section className="contact-details">
-        <h2>Contact Details</h2>
           <div className="cont-wrap">
             <div className="details-wrapper">
               <div className="office-details">
@@ -53,9 +41,6 @@ const Contact = () => {
             </form >
                     </div>
           </div>
-      </section>
-      <section className="contactForm">
-        
       </section>
     </main>
      );
