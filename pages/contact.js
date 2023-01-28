@@ -1,31 +1,4 @@
-import { useState } from 'react'
-
-
-
 const Contact = () => {
-
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-  const [submitted, setSubmitted] = useState(false)
-
-  const handleSubmit = (e) => { 
-    e.preventDefault()
-  let data = {
-      name,
-      email,
-      message
-    }
-  fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-  }
-  
 
     return ( 
     <main>
@@ -45,52 +18,44 @@ const Contact = () => {
       </section>
       <section className="contact-details">
         <h2>Contact Details</h2>
-        <div className="details-wrapper">
-          <div className="office-details">
-            <h3>Main Office</h3>
-            <address>Mail: sales@pmgates.co.uk</address>
-            <address>Address: </address>
-            <address>Phone: 123-456-3451</address>
-
-            <a className="view-portfolio" href="https://www.google.com/maps/place/PMGATES/@50.947899,-2.6800939,17z/data=!3m1!4b1!4m5!3m4!1s0x48726b6ce88f83ef:0xdc95f60cb51ea032!8m2!3d50.947899!4d-2.6779052">
-              <p className="whiteText">View on Map</p>
-              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20">
-                <g
-                  fill="none"
-                  fillRule="evenodd"
-                  stroke="#ffffff"
-                  strokeWidth="2"
-                >
-                  <path d="M15 1l9 9-9 9M0 10h24" />
-                </g>
-              </svg>
-            </a>
+          <div className="cont-wrap">
+            <div className="details-wrapper">
+              <div className="office-details">
+                <h3>Main Office</h3>
+                <address>Mail: sales@pmgates.co.uk</address>
+                <address>Address: </address>
+                <address>Phone: 123-456-3451</address>
+                <a target="_blank" href="https://www.google.com/maps/place/PMGATES/@50.947899,-2.6800939,17z/data=!3m1!4b1!4m5!3m4!1s0x48726b6ce88f83ef:0xdc95f60cb51ea032!8m2!3d50.947899!4d-2.6779052">
+                  <button className="button">View On Map</button>
+                </a>
+              </div>
+              <div className="office-details">
+                <h3>Owner/Manager</h3>
+                <address>Mail: </address>
+                <address>Phone: 832-123-4321</address>
+              </div>
+            </div>
+                    <div className="formContainer">
+            < form action="mailto:topdrive940@gmail.com" method="get" encType="text/plain" className="formWrapper" >
+              < div className="inputGroup" >
+                < label htmlFor='name'>Name</label>
+                < input type='text' id="name" name='name' className='inputField' />
+              </div>
+              < div className="inputGroup" >
+                < label htmlFor='email'>Email</label>
+                < input type='text' id="email" name='email' className='inputField' />
+              </div>
+              < div className="inputGroup" >
+                < label htmlFor='message'>Message</label>
+                < textarea cols="12" id="message" name='message' className='textarea' />
+              </div>
+              < button className="button" type='submit'>SEND</button>
+            </form >
+                    </div>
           </div>
-          <div className="office-details">
-            <h3>Owner/Manager</h3>
-            <address>Mail: </address>
-            <address>Phone: 832-123-4321</address>
-          </div>
-        </div>
       </section>
-      <section>
-        <div className="formContainer">
-          < form className="formWrapper" >
-            < formGroup className="inputGroup" >
-              < label htmlFor='name'>Name</label>
-              < input type='text' onChange={(e)=>{setName(e.target.value)}} name='name' className='inputField' />  
-            </formGroup>
-            < formGroup className="inputGroup" >
-              < label htmlFor='email'>Email</label>
-              < input type='text' onChange={(e)=>{setEmail(e.target.value)}} name='email' className='inputField' />
-            </formGroup>
-            < formGroup className="inputGroup" >
-              < label htmlFor='message'>Message</label>
-              < input type='text' onChange={(e)=>{setMessage(e.target.value)}} name='message' className='inputField' />
-            </formGroup>
-            < input type='submit' onClick={(e)=>{handleSubmit(e)}}/>
-          </form >
-        </div>
+      <section className="contactForm">
+        
       </section>
     </main>
      );

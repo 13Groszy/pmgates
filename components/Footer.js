@@ -1,5 +1,3 @@
-import Image from 'next/image';
-import logoWhite from '../public/logowhite-svg.svg';
 import { FaFacebook, FaPhoneAlt, FaRegEnvelope, FaEbay } from 'react-icons/fa';
 
 
@@ -7,11 +5,7 @@ const Footer = () => {
     return (
         <footer>
         <a href="./" className="footer-logo">
-          <Image
-          src={logoWhite}
-          alt=""
-          width={235}
-          height={70}/>
+          <img src="/logowhite-svg.svg" alt="PMGates - The Purpose Made Gates Company Logo" />
         </a>
         <div className="socials">
           <a href="#"><FaFacebook /></a>          
