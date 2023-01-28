@@ -1,107 +1,900 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+/* Body */
+body{
+  font-family: "Spartan", sans-serif;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
-
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
+p,
 a {
-  color: inherit;
+font-size: 15px;
+line-height: 25px;
+text-decoration: none;
+}
+
+h2.heading-small {
+font-size: 48px;
+line-height: 48px;
+}
+
+h2 {
+font-size: 40px;
+line-height: 48px;
+}
+
+h3 {
+font-size: 18px;
+line-height: 25px;
+letter-spacing: 0px;
+}
+
+/* Header */
+.primary-heading {
+  position: fixed;
+  width: 100vw;
+  height: 100px;
+  background-color: #eeeff4;
+  border-bottom: 1px solid #000;
+  z-index: 9999;
+}
+main{
+  padding-top:100px;
+}
+.primary-navigation {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 450px;
+  margin: auto;
+  height: 100%;
+}
+.nav-items {
+  display: none;
+  list-style: none;
+  position: fixed;
+  right: 0;
+  top: 100px;
+  width: 100%;
+  height: 175px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eeeff4;
+  z-index: 10;
+}
+.nav-items li{
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #000;
+  background-color: #eeeff4;
+}
+.nav-items li:last-of-type{
+  border-bottom: 1px solid #000;
+}
+.nav-items li a {
+  color: #7d828f;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-items li a:hover {
+  color: #60636d;
   text-decoration: none;
 }
+.eBay img{
+  max-height: 30px;
+}
+#mobile-nav-btn {
+  display: inline;
+  border: 0;
+}
+.logo img{
+  max-height: 70px;
+}
+.show{
+  display: flex;
+}
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* Footer */
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  margin: 144px 0 0 0;
+  padding-bottom: 3rem;
+  padding-top: 92px;
+  background: #eeeff4;
+}
+.socials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.socials svg{
+  font-size: 2rem;
+}
+.socials svg:hover{
+  color: #000;
+  transition: all 300ms ease-in;
+}
+
+.footer-logo {
+  position: absolute;
+  top: -4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 120px;
+  background-color: #1b1d23;
+}
+
+.footer-logo > img {
+  max-height: 70px;
+}
+
+footer a {
+  color: #7d828f;
+}
+
+/* Other */
+
+.view-portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  max-width: 252px;
+  max-height: 72px;
+  padding: 1.5em 1.75em;
+  background-color: #1b1d23;
+}
+
+.view-portfolio:hover {
+  background-color: #7d828f;
+}
+
+footer .view-portfolio {
+  margin-top: 0;
+}
+.view-portfolio{
+  color: white;
+}
+.view-portfolio a {
+  color: #eeeff4;
+}
+
+.page-marker {
+  display: none;
+}
+
+
+@media screen and (min-width: 768px) {
+  #mobile-nav-btn {
+    display: none;
+  }
+  .primary-navigation{
+      flex-direction: row;
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+  }
+  .nav-items {
+      display: flex;
+      list-style: none;
+      position: static;
+      right: 0;
+      top: 100px;
+      width: 500px;
+      height: auto;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #eeeff4;
+      z-index: 10;
+    }
+    .nav-items li{
+      padding: 1rem;
+      width: auto;
+      text-align: center;
+      border: none;
+    }
+    .nav-items li img{
+      max-height: 30px;
+    }
+    .nav-items li:last-of-type{
+      border: none;
+    }
+    .nav-items li a {
+      color: #7d828f;
+      text-decoration: none;
+    }
+    
+    .nav-items li a:hover {
+      color: #60636d;
+      text-decoration: none;
+    }
+}
+/* HOME */
+.container-outer {
+  height: 560px;
+  margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  transition: all 300ms ease-in;
+}
+.slider{
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+.slider.container-outer {
+  background: url("/temp_gate.jpg") no-repeat;
+}
+.about.container-outer {
+  background: url("/temp_gate2.jpeg") no-repeat;
+}
+.whiteText {
+  color: white;
+}
+.about {
+  margin: 95px auto 72px auto;
+}
+
+.container-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  background-color: #00000066;
+}
+
+.container-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.container-content .view-portfolio {
+  padding: 1.5em 1.5em;
+}
+
+.container-content {
+  margin: 1.5rem;
+}
+
+.view-portfolio {
+  margin-top: 1em;
+  padding: 1.5em;
+}
+
+.featured-projects-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.featured-projects-container h2 {
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-card-outer {
+  width: 90vw;
+  height: 90vw;
+  max-width: 500px;
+  max-height: 500px;
+  margin: auto;
+  position: relative;
+}
+.project-card-outer h3{
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.gate-one {
+  background: url("/temp_gate.jpg") no-repeat;
+}
+
+.gate-two {
+  background: url("/temp_gate2.jpeg") no-repeat;
+}
+
+.gate-three {
+  background: url("/temp_gate.jpg") no-repeat;
+}
+.welcome-image,
+.heading-large,
+.slider-container {
+  display: none;
+}
+.home-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+.home-copy{
+  padding-bottom: 2rem;
+}
+.home-copy h1{
+  padding-bottom: 2rem;
+}
+.home-copy h1, .home-copy p{
+  color:#000000;
+}
+@media (min-width: 768px) {
+  .project-card-outer{
+    max-width: 1100px;
+    background-size: cover;
+  }
+  .container-inner{
+    position: relative;
+  }
+  .slider-container{
+    display: block;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+  }
+  .slider-container > button{
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 2rem;
+  }
+  .slider-container button.active{
+    background-color: #000;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
   }
 }
+
+@media (min-width: 1024px) {
+  .home-wrapper{
+    position: relative;
+    margin-bottom: 5rem;
+  }
+  .welcome-image{
+    display: block;
+    width: 100%;
+  }
+  .home-copy{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.7);
+    width: 33%;
+    right: -2rem;
+    top: 10%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .home-copy h1{
+    font-size: 3rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  .home-copy p{
+    text-align: right;
+  }
+}
+@media (min-width: 1200px) {
+  .home-copy{
+    right: -5rem;
+  }
+}
+
+
+/* ABOUT */
+.intro {
+  position: relative;
+  max-width: 375px;
+  margin: 0 auto;
+  margin-bottom: 22rem;
+  z-index: 99;
+}
+
+.intro-img {
+  min-width: 320px;
+  width: 100%;
+  height: 240px;
+  background: url("/temp_gate.jpg") no-repeat;
+}
+
+.intro-img-overlay {
+  width: 100%;
+  height: 100%;
+  background: #00000055;
+}
+
+.intro-text {
+  position: absolute;
+  left: 0;
+  top: 15.5rem;
+  padding-inline: 1rem;
+  background: transparent;
+}
+
+.intro-text h2,
+.our-heritage h2,
+.our-heritage p {
+  margin-bottom: 1rem;
+}
+
+.our-heritage {
+  width: 90%;
+  margin: auto;
+  margin-block: 5rem;
+}
+
+.our-heritage * {
+  text-align: left;
+}
+
+.leader-section {
+  width: 311px;
+  margin: 0 auto;
+}
+
+.leader-section h2 {
+  margin-bottom: 26px;
+}
+
+.leader-card > img {
+  width: 311px;
+  margin-bottom: 1.5rem;
+}
+
+.leader-card p {
+  margin-bottom: 0.5rem;
+}
+
+.intro h2.heading-small{
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .intro {
+    max-width: 574px;
+    height: 720px;
+    margin: 0 auto;
+  }
+  .intro-img {
+    width: 100%;
+    height: 100%;
+    background-image: url("/temp_gate.jpg");
+  }
+  .intro-text {
+    width: 456px;
+    height: 268px;
+    top: 19rem;
+    left:auto;
+    right: 0;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  .intro h2.heading-small {
+    display: block;
+    position: absolute;
+    top: 16rem;
+    right: 5rem;
+    transform: scale(1.5);
+    z-index: 999;
+    color: #eeeff4;
+  }
+  .our-heritage {
+    max-width: 574px;
+    margin-top: 5rem;
+  }
+  .our-heritage h2 {
+    margin-bottom: 3.5rem;
+  }
+  .our-heritage p {
+    margin-bottom: 1.5rem;
+  }
+  .leader-section {
+    width: 573px;
+  }
+  .leader-card-container {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: 281px 281px;
+    gap: 1rem;
+  }
+  .leader-card > img {
+    width: 280px;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    max-width: 1110px;
+    margin: auto;
+  }
+  .intro {
+    width: 100%;
+    max-width: none;
+  }
+  .intro-img {
+    background-image: url("/temp_gate.jpg");
+  }
+  .intro h2.heading-small {
+    transform: scale(2.5);
+    top: 9rem;
+    right: 10rem;
+    z-index: 999;
+  }
+  .intro-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 446px;
+    height: 343px;
+    top: 14rem;
+  }
+  .our-heritage {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    width: 100%;
+  }
+  .leader-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1110px;
+  }
+  .leader-card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .leader-card {
+    position: relative;
+  }
+  .leader-card > img {
+    width: 350px;
+    height: 320px;
+  }
+}
+@media (min-width: 768px) {
+  .leader-section{
+    width: 90%;
+    margin:auto;
+  }
+}
+
+/* CONTACTS */
+
+.contact-intro {
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto;
+  margin-bottom: 27.5rem;
+  z-index: 99;
+}
+.details-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+.contact-intro-img {
+  min-width: 320px;
+  width: 100%;
+  max-width: 375px;
+  height: 240px;
+  background: url("/temp_gate.jpg") no-repeat;
+}
+
+.contact-intro-img-overlay {
+  width: 100%;
+  height: 100%;
+  background: #00000055;
+}
+
+.contact-intro-text {
+  position: absolute;
+  left: 0;
+  top: 12.5rem;
+  padding: 4.5rem 0.75rem 0 2rem;
+  padding-top: 4.5rem;
+  background: #fff;
+}
+.contact-intro-text h2{
+  padding-bottom: 2rem;
+}
+
+.contact-intro h2.contact-heading-small {
+  display: none;
+}
+
+.contact-intro-text {
+  margin-bottom: 130px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+}
+
+.contact-details > h2 {
+  margin-bottom: 2rem;
+}
+
+.office-details {
+  margin-bottom: 2rem;
+}
+
+.office-details > h3 {
+  margin-bottom: 2rem;
+}
+
+.office-details address {
+  margin-bottom: 1rem;
+}
+
+.view-map {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.view-map a {
+  color: #000;
+}
+.formContainer{
+  max-width: 300px;
+}
+.formWrapper{
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.inputGroup {
+  height: 50%;
+  width: 200%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+.inputLabel {
+  text-align: left;
+}
+.inputField {
+  height: 30px;
+}
+
+@media (min-width: 576px) {
+  .contact-intro {
+    width: 574px;
+    height: 720px;
+    margin: 0 auto;
+  }
+  .contact-intro-img {
+    width: 100%;
+    height: 100%;
+    background-image: url("/image-hero.jpg");
+  }
+  .contact-intro-text {
+    height: 268px;
+    padding: 3rem 2rem 3rem 3rem;
+    top: 19rem;
+    left: 4rem;
+  }
+  .contact-intro-text h2 {
+    margin-bottom: 3rem;
+  }
+  .contact-intro h2.contact-heading-small {
+    display: block;
+    position: absolute;
+    top: 16rem;
+    right: 5rem;
+    transform: scale(1.5);
+    color: #eeeff4;
+  }
+  .contact-details {
+    padding-top:5rem;
+  }
+  .office-details {
+    position: relative;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-intro {
+    width: 635px;
+    height: 720px;
+    margin: 0;
+  }
+  .contact-intro-img {
+    max-width: 573px;
+    background-image: url("/temp_gate.jpg");
+  }
+  .contact-intro h2.contact-heading-small {
+    transform: scale(2.5);
+    top: 11rem;
+    z-index: 999;
+  }
+  .contact-intro-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 343px;
+    padding: 2rem 3rem;
+    top: 20rem;
+    left:50%;
+  }
+  .contact-intro-text h2{
+    margin-bottom:0;
+  }
+  .contact-details {    
+    gap: 4rem;
+    max-width: 1110px;
+  }
+  .contact-details h2 {
+    max-width: 350px;
+  }
+  .office-details {
+    margin-right: 2rem;
+  }
+  .office-details a:hover {
+    color: #60636d;
+  }
+  .view-map {
+    position: static;
+  }
+  .details-wrapper{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:5rem;
+  }
+}
+
+
+/* SERVICES */
+
+.FAQ{
+width: 90%;
+max-width: 800px;
+margin: auto;
+}
+
+/* COOKIES */
+
+.cookiePopUp {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #e8e8e8;
+  color: #000;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.cookiePopUp button{
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+}
+.cookiePopUp a, .cookiePopUp button{
+  color: #000;
+  font-weight: bold;
+}
+.cookiePopUp a:hover, .cookiePopUp button:hover{
+  color: #60636d;
+}
+.servicesWrapper{
+  max-width: 1100px;
+  margin: auto;
+}
+.servicesWrapper h1{
+ display: none;
+}
+.servicesAccordion{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+.servicesAccordion > .accordion{
+  min-width: 300px;
+  max-width: 600px;
+  padding-top: 1rem;
+}
+.products{
+  width: 90%;
+  margin: auto;
+}
+.productsOffer{
+  padding-block: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+.products img{
+  width:80%;
+  max-width: 600px;
+}
+.productsOffer img{
+  width: 75%;
+}
+.products ul li {
+  flex-direction: column;
+}
+.products ul li span{
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.products ul li p{
+  font-size: 1rem;
+}
+.customDesigns h2{
+  padding-bottom: 1rem;
+}
+.customDesigns img{
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+.FAQ h2{
+padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .servicesWrapper{
+    background: url("/temp_gate.jpg") no-repeat center center/cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    height: 50vh;
+    display: flex;
+    align-items: flex-end;
+  }
+  .servicesWrapper h1{
+    font-size: 75px;
+    color: white;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    display: block;
+  }
+  .productsOffer{
+    flex-direction: row;
+  }
+  .productsOffer img{
+    width: 50%;
+  }
+}
+  
