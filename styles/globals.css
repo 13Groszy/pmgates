@@ -760,15 +760,22 @@ margin: auto;
   align-items: center;
   flex-direction: column-reverse;
 }
-.products img{
-  width:80%;
-  max-width: 600px;
-}
 .productsOffer img{
   width: 75%;
 }
+.products ul{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 .products ul li {
   flex-direction: column;
+  width: 100%;
+}
+.products ul li img{
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
 }
 .products ul li span{
   font-size: 1.25rem;
@@ -815,6 +822,15 @@ padding-bottom: 1rem;
   }
   .productsOffer img{
     width: 50%;
+  }
+  .products ul{
+    flex-direction: row;
+  }
+  .products ul li {
+    width: 33%;
+  }
+  .accordion{
+    margin: auto;
   }
 }
 .button{

@@ -152,12 +152,12 @@ export default function Services() {
         </div>
         <div>
           <h2>Colours:</h2>
-          <div className=''>
+          <div className='reversed'>
             <List>
               {colors.map((color) => (
                 <ListItem key={color.id}>
-                  <ListItemText primary={color.name} secondary={color.description} />
                   <img src={color.image} alt={color.alt} />
+                  <ListItemText primary={color.name} secondary={color.description} />
                 </ListItem>
               ))}
             </List>
