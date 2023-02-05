@@ -855,6 +855,10 @@ padding-bottom: 1rem;
   padding-top: 15rem;
   text-align: center;
 }
+.CookieConsent a {
+  color: #999;
+  font-weight: bold;
+}
 @media screen and (min-width: 768px) {
   .cont-wrap{
     flex-direction: row;
