@@ -847,6 +847,14 @@ padding-bottom: 1rem;
   display: flex;
   flex-direction:column;
 }
+.not-found{
+  height: 40vh;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  padding-top: 15rem;
+  text-align: center;
+}
 @media screen and (min-width: 768px) {
   .cont-wrap{
     flex-direction: row;

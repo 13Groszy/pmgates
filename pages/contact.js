@@ -24,7 +24,7 @@ const Contact = () => {
               </div>
             </div>
                     <div className="formContainer">
-            < form action="mailto:topdrive940@gmail.com" method="get" encType="text/plain" className="formWrapper" >
+            < form href="mailto:topdrive940@gmail.com" method="get" encType="text/plain" className="formWrapper" >
               < div className="inputGroup" >
                 < label htmlFor='name'>Name</label>
                 < input type='text' id="name" name='name' className='inputField' />
