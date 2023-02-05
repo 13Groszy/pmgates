@@ -859,6 +859,16 @@ padding-bottom: 1rem;
   color: #999;
   font-weight: bold;
 }
+.TOS h2{
+padding-top:3rem;
+}
+.TOS p{
+  padding-top: 1rem;
+}
+.TOS p:last-of-type{
+  padding-top: 3rem;
+  font-size: 1.5rem;
+}
 @media screen and (min-width: 768px) {
   .cont-wrap{
     flex-direction: row;
